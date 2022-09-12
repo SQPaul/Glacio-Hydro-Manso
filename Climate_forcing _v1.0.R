@@ -1,6 +1,6 @@
 rm(list=ls())
 cat("\014")  
-setwd("C:\\Users\\Paul Sandoval\\Desktop\\Ingeniería Civil\\VI año\\Memoria de título\\Modelación\\Climate_forcing\\pcraster_format")
+setwd("C:\\Users\\Paul Sandoval\\Desktop\\IngenierÃ­a Civil\\VI aÃ±o\\Memoria de tÃ­tulo\\ModelaciÃ³n\\Climate_forcing\\pcraster_format")
 
 #IMPROVE CHECK AND DELETE NEGATIVE NUMBERS ON PREC GRIDDED DATA
 
@@ -8,11 +8,11 @@ library("raster")
 library("readxl")
 library("gdalUtilities")
 
-DEM <-raster("C:\\Users\\Paul Sandoval\\Desktop\\Ingeniería Civil\\VI año\\Memoria de título\\Modelación\\Climate_forcing\\dem.tif")
+DEM <-raster("C:\\Users\\Paul Sandoval\\Desktop\\IngenierÃ­a Civil\\VI aÃ±o\\Memoria de tÃ­tulo\\ModelaciÃ³n\\Climate_forcing\\dem.tif")
 
 #1 Import data from excel
 
-xlsx_doc <- "C:\\Users\\Paul Sandoval\\Desktop\\Ingeniería Civil\\VI año\\Memoria de título\\Modelación\\Climate_forcing\\Climate_forcing.xlsx"
+xlsx_doc <- "C:\\Users\\Paul Sandoval\\Desktop\\IngenierÃ­a Civil\\VI aÃ±o\\Memoria de tÃ­tulo\\ModelaciÃ³n\\Climate_forcing\\Climate_forcing.xlsx"
 
 data_prec <- read_xlsx(xlsx_doc, sheet = 1, guess_max = 30000)
 data_tmax <- read_xlsx(xlsx_doc, sheet = 2, guess_max = 30000)
@@ -49,8 +49,8 @@ lr_t3m <- -0.0065
 
 #5 Create .tif and .map directories
 
-tif_dir <- "C:\\Users\\Paul Sandoval\\Desktop\\Ingeniería Civil\\VI año\\Memoria de título\\Modelación\\Climate_forcing\\pcraster_format\\"
-pcr_dir <- "C:\\Users\\Paul Sandoval\\Desktop\\Ingeniería Civil\\VI año\\Memoria de título\\Modelación\\Climate_forcing\\pcraster_format\\PCRASTER\\"
+tif_dir <- "C:\\Users\\Paul Sandoval\\Desktop\\IngenierÃ­a Civil\\VI aÃ±o\\Memoria de tÃ­tulo\\ModelaciÃ³n\\Climate_forcing\\pcraster_format\\"
+pcr_dir <- "C:\\Users\\Paul Sandoval\\Desktop\\IngenierÃ­a Civil\\VI aÃ±o\\Memoria de tÃ­tulo\\ModelaciÃ³n\\Climate_forcing\\pcraster_format\\PCRASTER\\"
 
 #6 Create prec series
 
